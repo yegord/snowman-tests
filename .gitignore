@@ -1,0 +1,13 @@
+# Tests that must never go to the repository.
+/private/
+
+# Core dumps.
+core
+!core/
+vgcore.*
+
+# vim swap files.
+*.sw[a-z]
+
+# Python's byte code files.
+*.pyc
