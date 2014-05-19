@@ -114,8 +114,8 @@ if not args.no_default_tests:
     testFiles.extend(glob.glob(os.path.join(testsDirectory, 'hand-made', '[0-9][0-9][0-9]_*')))
     testFiles.extend(glob.glob(os.path.join(testsDirectory, 'bulk', '*')))
     testFiles.extend(glob.glob(os.path.join(testsDirectory, 'private', '*')))
-    testFiles.append(os.path.join(testsDirectory, 'hand-made'))
-    testFiles.append(os.path.join(testsDirectory, 'non-existent'))
+    testFiles.append(os.path.join(testsDirectory, 'hand-made', 'src'))
+    testFiles.append(os.path.join(testsDirectory, 'hand-made', 'non-existent'))
 
 for pattern in args.tests_pattern:
     testFiles.extend(glob.glob(pattern))
