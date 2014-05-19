@@ -1,6 +1,6 @@
 
-int64_t g1;
+int64_t g64;
 
 void func_4000d4() {
-    g1 = 2;
+    g64 = 2;
 }
