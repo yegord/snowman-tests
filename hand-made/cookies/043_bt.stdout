@@ -1,10 +1,10 @@
 
-int32_t g1;
+int32_t g1f4;
 
 void func_8048098() {
     uint32_t eax1;
 
     if (!!(eax1 >> 3)) {
-        g1 = 10;
+        g1f4 = 10;
     }
 }
