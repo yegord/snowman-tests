@@ -112,7 +112,8 @@ testFiles = []
 if not args.no_default_tests:
     testsDirectory = os.path.dirname(__file__)
     testFiles.extend(glob.glob(os.path.join(testsDirectory, 'hand-made', '[0-9][0-9][0-9]_*')))
-    testFiles.extend(glob.glob(os.path.join(testsDirectory, 'bulk', '*')))
+    testFiles.extend(glob.glob(os.path.join(testsDirectory, 'bulk-mingw32', '*')))
+    testFiles.extend(glob.glob(os.path.join(testsDirectory, 'bulk-x86-64', '*')))
     testFiles.extend(glob.glob(os.path.join(testsDirectory, 'private', '*')))
     testFiles.append(os.path.join(testsDirectory, 'hand-made', 'src'))
     testFiles.append(os.path.join(testsDirectory, 'hand-made', 'non-existent'))
