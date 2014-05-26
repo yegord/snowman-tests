@@ -8,24 +8,24 @@ void h() {
 }
 
 void f(int32_t edi, int32_t esi, int32_t edx, int32_t ecx) {
-    int32_t v1;
-    int32_t v2;
-    int32_t v3;
-    int32_t v4;
+    int32_t v5;
+    int32_t v6;
+    int32_t v7;
+    int32_t v8;
 
-    v1 = edi;
-    v2 = esi;
-    v3 = edx;
-    v4 = ecx;
-    if (v1 != 0 && v2 != 0 || v3 != 0 && v4 != 0) {
+    v5 = edi;
+    v6 = esi;
+    v7 = edx;
+    v8 = ecx;
+    if (v5 != 0 && v6 != 0 || v7 != 0 && v8 != 0) {
         g();
     } else {
         h();
     }
-    if ((v1 != 0 || v2 != 0) && (v3 != 0 || v4 != 0)) {
+    if ((v5 != 0 || v6 != 0) && (v7 != 0 || v8 != 0)) {
         g();
     }
-    if (v1 != 0 || (v2 != 0 && v3 != 0 || v4 != 0)) {
+    if (v5 != 0 || (v6 != 0 && v7 != 0 || v8 != 0)) {
         h();
     }
     return;
