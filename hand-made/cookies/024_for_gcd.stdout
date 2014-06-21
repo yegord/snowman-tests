@@ -1,27 +1,32 @@
 
-int32_t gcd(int32_t edi, int32_t esi) {
-    int32_t v1;
-    int32_t v2;
-    int32_t eax3;
+int64_t gcd(int32_t edi, int32_t esi) {
+    int32_t v3;
+    int32_t v4;
+    int64_t rax5;
 
-    v1 = edi;
-    v2 = esi;
-    if (v2 == 0) {
-        eax3 = v1;
+    v3 = edi;
+    v4 = esi;
+    if (v4 == 0) {
+        *(int32_t*)&rax5 = v3;
+        *((int32_t*)&rax5 + 1) = 0;
     } else {
-        eax3 = gcd(v2, v1 % v2);
+        rax5 = gcd(v4, v3 % v4);
     }
-    return eax3;
+    return rax5;
 }
 
-int32_t main() {
+int64_t main() {
     int32_t v1;
-    int64_t rax2;
-    int32_t eax3;
+    int32_t eax2;
+    int64_t rax3;
+    int64_t rax4;
 
     v1 = 0;
     while (v1 <= 9) {
-        eax3 = gcd(v1, (int32_t)(rax2 + 1));
+        eax2 = v1;
+        *(int32_t*)&rax3 = eax2 + eax2;
+        *((int32_t*)&rax3 + 1) = 0;
+        rax4 = gcd(v1, (int32_t)(rax3 + 1));
         ++v1;
     }
     return 0;
