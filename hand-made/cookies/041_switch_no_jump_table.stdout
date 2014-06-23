@@ -9,21 +9,21 @@ int32_t Z9do_switchi(int32_t a1) {
 
     eax2 = a1;
     if (eax2 == 5) {
-        eax3 = 0x80481a8;
+        eax3 = (int32_t)"five";
     } else {
         if (5 < eax2) {
             if (eax2 == 8) {
-                eax3 = 0x80481b7;
+                eax3 = (int32_t)"eight";
             } else {
                 if (8 < eax2) {
                     if (eax2 == 10) {
-                        eax3 = 0x80481c2;
+                        eax3 = (int32_t)"ten";
                     } else {
                         if (eax2 < 10) {
-                            eax3 = 0x80481bd;
+                            eax3 = (int32_t)"nine";
                         } else {
                             if (eax2 == 0x18894) {
-                                eax3 = 0x80481c6;
+                                eax3 = (int32_t)"stopyatsot";
                             } else {
                                 goto addr_0x8048189_14;
                             }
@@ -31,10 +31,10 @@ int32_t Z9do_switchi(int32_t a1) {
                     }
                 } else {
                     if (eax2 == 6) {
-                        eax3 = 0x80481ad;
+                        eax3 = (int32_t)"six";
                     } else {
                         if (eax2 == 7) {
-                            eax3 = 0x80481b1;
+                            eax3 = (int32_t)"seven";
                         } else {
                             goto addr_0x8048189_14;
                         }
@@ -43,24 +43,24 @@ int32_t Z9do_switchi(int32_t a1) {
             }
         } else {
             if (eax2 == 2) {
-                eax3 = 0x8048199;
+                eax3 = (int32_t)"two";
             } else {
                 if (2 < eax2) {
                     if (eax2 == 3) {
-                        eax3 = 0x804819d;
+                        eax3 = (int32_t)"three";
                     } else {
                         if (eax2 == 4) {
-                            eax3 = 0x80481a3;
+                            eax3 = (int32_t)"four";
                         } else {
                             goto addr_0x8048189_14;
                         }
                     }
                 } else {
                     if (eax2 == 0) {
-                        eax3 = 0x8048190;
+                        eax3 = (int32_t)"zero";
                     } else {
                         if (eax2 == 1) {
-                            eax3 = 0x8048195;
+                            eax3 = (int32_t)"one";
                         } else {
                             goto addr_0x8048189_14;
                         }
@@ -72,6 +72,6 @@ int32_t Z9do_switchi(int32_t a1) {
     addr_0x804818e_33:
     return eax3;
     addr_0x8048189_14:
-    eax3 = 0x80481d1;
+    eax3 = (int32_t)"many";
     goto addr_0x804818e_33;
 }
