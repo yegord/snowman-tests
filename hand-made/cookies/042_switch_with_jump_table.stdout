@@ -1,17 +1,11 @@
 
-/*
- * _Z6printfz
- * printf(...)
- */
-void Z6printfz(int32_t a1) {
+/* printf(...) */
+void _Z6printfz(int32_t a1) {
     return;
 }
 
-/*
- * _Z9do_switchi
- * do_switch(int)
- */
-int32_t Z9do_switchi(int32_t a1) {
+/* do_switch(int) */
+int32_t _Z9do_switchi(int32_t a1) {
     int32_t eax2;
 
     switch ((uint32_t)a1) {
@@ -19,7 +13,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"many";
         break;
     case 0:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 1:
         eax2 = (int32_t)"1";
         break;
@@ -117,7 +111,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"32";
         break;
     case 33:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 34:
         eax2 = (int32_t)"34";
         break;
@@ -215,7 +209,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"65";
         break;
     case 66:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 67:
         eax2 = (int32_t)"67";
         break;
@@ -313,7 +307,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"98";
         break;
     case 99:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 100:
         eax2 = (int32_t)"100";
         break;
@@ -411,7 +405,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"131";
         break;
     case 0x84:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x85:
         eax2 = (int32_t)"133";
         break;
@@ -509,7 +503,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"164";
         break;
     case 0xa5:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0xa6:
         eax2 = (int32_t)"166";
         break;
@@ -607,7 +601,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"197";
         break;
     case 0xc6:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0xc7:
         eax2 = (int32_t)"199";
         break;
@@ -705,7 +699,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"230";
         break;
     case 0xe7:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0xe8:
         eax2 = (int32_t)"232";
         break;
@@ -803,7 +797,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"263";
         break;
     case 0x108:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x109:
         eax2 = (int32_t)"265";
         break;
@@ -901,7 +895,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"296";
         break;
     case 0x129:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x12a:
         eax2 = (int32_t)"298";
         break;
@@ -999,7 +993,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"329";
         break;
     case 0x14a:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x14b:
         eax2 = (int32_t)"331";
         break;
@@ -1097,7 +1091,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"362";
         break;
     case 0x16b:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x16c:
         eax2 = (int32_t)"364";
         break;
@@ -1195,7 +1189,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"395";
         break;
     case 0x18c:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x18d:
         eax2 = (int32_t)"397";
         break;
@@ -1293,7 +1287,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"428";
         break;
     case 0x1ad:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x1ae:
         eax2 = (int32_t)"430";
         break;
@@ -1391,7 +1385,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"461";
         break;
     case 0x1ce:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x1cf:
         eax2 = (int32_t)"463";
         break;
@@ -1489,7 +1483,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"494";
         break;
     case 0x1ef:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x1f0:
         eax2 = (int32_t)"496";
         break;
@@ -1587,7 +1581,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"527";
         break;
     case 0x210:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x211:
         eax2 = (int32_t)"529";
         break;
@@ -1685,7 +1679,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"560";
         break;
     case 0x231:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x232:
         eax2 = (int32_t)"562";
         break;
@@ -1783,7 +1777,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"593";
         break;
     case 0x252:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x253:
         eax2 = (int32_t)"595";
         break;
@@ -1881,7 +1875,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"626";
         break;
     case 0x273:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x274:
         eax2 = (int32_t)"628";
         break;
@@ -1979,7 +1973,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"659";
         break;
     case 0x294:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x295:
         eax2 = (int32_t)"661";
         break;
@@ -2077,7 +2071,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"692";
         break;
     case 0x2b5:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x2b6:
         eax2 = (int32_t)"694";
         break;
@@ -2175,7 +2169,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"725";
         break;
     case 0x2d6:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x2d7:
         eax2 = (int32_t)"727";
         break;
@@ -2273,7 +2267,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"758";
         break;
     case 0x2f7:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x2f8:
         eax2 = (int32_t)"760";
         break;
@@ -2371,7 +2365,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"791";
         break;
     case 0x318:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x319:
         eax2 = (int32_t)"793";
         break;
@@ -2469,7 +2463,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"824";
         break;
     case 0x339:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x33a:
         eax2 = (int32_t)"826";
         break;
@@ -2567,7 +2561,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"857";
         break;
     case 0x35a:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x35b:
         eax2 = (int32_t)"859";
         break;
@@ -2665,7 +2659,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"890";
         break;
     case 0x37b:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x37c:
         eax2 = (int32_t)"892";
         break;
@@ -2763,7 +2757,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"923";
         break;
     case 0x39c:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x39d:
         eax2 = (int32_t)"925";
         break;
@@ -2861,7 +2855,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"956";
         break;
     case 0x3bd:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x3be:
         eax2 = (int32_t)"958";
         break;
@@ -2959,7 +2953,7 @@ int32_t Z9do_switchi(int32_t a1) {
         eax2 = (int32_t)"989";
         break;
     case 0x3de:
-        Z6printfz("Hmm...");
+        _Z6printfz("Hmm...");
     case 0x3df:
         eax2 = (int32_t)"991";
         break;
