@@ -8,11 +8,11 @@ int32_t _Z9do_switchi(int32_t a1) {
     if (eax2 == 5) {
         eax3 = (int32_t)"five";
     } else {
-        if (5 < eax2) {
+        if (eax2 > 5) {
             if (eax2 == 8) {
                 eax3 = (int32_t)"eight";
             } else {
-                if (8 < eax2) {
+                if (eax2 > 8) {
                     if (eax2 == 10) {
                         eax3 = (int32_t)"ten";
                     } else {
@@ -42,7 +42,7 @@ int32_t _Z9do_switchi(int32_t a1) {
             if (eax2 == 2) {
                 eax3 = (int32_t)"two";
             } else {
-                if (2 < eax2) {
+                if (eax2 > 2) {
                     if (eax2 == 3) {
                         eax3 = (int32_t)"three";
                     } else {
