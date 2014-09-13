@@ -1,7 +1,7 @@
 
 int32_t g1f4;
 
-void func_8048098() {
+void fun_8048098() {
     uint32_t eax1;
 
     if (!!(eax1 >> 3)) {

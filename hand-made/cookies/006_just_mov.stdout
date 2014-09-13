@@ -4,7 +4,7 @@ struct s0 {
     int32_t f4;
 };
 
-void func_8048098() {
+void fun_8048098() {
     struct s0* eax1;
 
     eax1->f4 = 0x3e8;

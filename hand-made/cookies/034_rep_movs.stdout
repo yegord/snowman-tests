@@ -1,5 +1,5 @@
 
-void func_4000d4() {
+void fun_4000d4() {
     int32_t ecx1;
     int32_t* rdi2;
     int32_t* rsi3;
