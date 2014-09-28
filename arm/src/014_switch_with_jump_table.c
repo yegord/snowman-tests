@@ -1006,3 +1006,5 @@ const char *do_switch(int x) {
 	};
 	return 0;
 }
+
+int main() {}

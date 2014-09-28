@@ -9,3 +9,5 @@ void f(int a, int b, int c) {
 		g(&a, &b, &c);
 	}
 }
+
+int main() {}

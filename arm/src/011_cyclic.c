@@ -45,3 +45,5 @@ void f(int a, int b, int c, int d) {
 		}
 	} while (g() && h());
 }
+
+int main() {}

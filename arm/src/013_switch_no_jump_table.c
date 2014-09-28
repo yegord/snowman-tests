@@ -28,3 +28,5 @@ const char *do_switch(int x) {
 		return "many";
 	};
 }
+
+int main() {}

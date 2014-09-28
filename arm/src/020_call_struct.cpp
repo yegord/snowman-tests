@@ -17,3 +17,5 @@ void f(A a, B b) {
 void g() {
 	f(A(), B());
 }
+
+int main() {}

@@ -12,3 +12,5 @@ int f() {
 	some_value += 10;
 	return g(some_value, some_value, some_value, some_value);
 }
+
+int main() {}
