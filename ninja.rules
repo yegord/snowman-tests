@@ -1,0 +1,12 @@
+diff = diff
+run = run.py
+tee = tee
+decompiler = nocode
+timeout = 300
+exit_code = 0
+
+rule decompile
+    command = $run --stdout $stdout --stderr $stderr --timeout $timeout --exit-code $exit_code $decompiler $in
+
+rule check_equal
+    command = $diff -u $in | $tee $out
