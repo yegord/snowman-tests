@@ -95,9 +95,12 @@ def main():
     args = parser.parse_args()
 
     if len(args.test) == 0:
-        args.test.extend(glob.glob(os.path.join(scriptdir, 'hand-made', '[0-9][0-9][0-9]_*')))
+        args.test.extend(glob.glob(os.path.join(scriptdir, 'arm', '[0-9][0-9][0-9]_*')))
         args.test.extend(glob.glob(os.path.join(scriptdir, 'bulk-mingw32', '*')))
         args.test.extend(glob.glob(os.path.join(scriptdir, 'bulk-x86-64', '*')))
+        args.test.extend(glob.glob(os.path.join(scriptdir, 'debian-armel', '*')))
+        args.test.extend(glob.glob(os.path.join(scriptdir, 'debian-armhf', '*')))
+        args.test.extend(glob.glob(os.path.join(scriptdir, 'hand-made', '[0-9][0-9][0-9]_*')))
 
     gen = Generator(builddir = args.builddir, decompiler = os.path.abspath(args.decompiler))
     gen.add_tests(args.test)
