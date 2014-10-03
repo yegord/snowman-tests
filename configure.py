@@ -53,8 +53,9 @@ class Generator(object):
             self.check_equal(correct_stderr, stderr)
 
     def decompile(self, filename, **kwargs):
-        stdout = os.path.abspath((os.path.join(self.builddir, './' + filename) + '.stdout'))
-        stderr = os.path.abspath((os.path.join(self.builddir, './' + filename) + '.stderr'))
+        basepath = os.path.abspath((os.path.join(self.builddir, hashlib.sha256(filename).hexdigest())))
+        stdout = basepath + '.stdout'
+        stderr = basepath + '.stderr'
 
         variables = kwargs
         variables['stdout'] = stdout
@@ -68,8 +69,12 @@ class Generator(object):
     def check_equal(self, filename1, filename2):
         filename1 = os.path.abspath(filename1)
         filename2 = os.path.abspath(filename2)
-        outfile = os.path.join(self.builddir, '_check_equal', hashlib.sha256(filename1 + ':' + filename2).hexdigest())
-        self.ninja.build([outfile], 'check_equal', inputs=[filename1, filename2])
+        outfile = os.path.join(self.builddir, hashlib.sha256(filename1 + ':' + filename2).hexdigest()) + '.diff'
+
+        variables = {}
+        variables['description'] = 'Diff %s and %s' % (filename1, filename2)
+
+        self.ninja.build([outfile], 'check_equal', inputs=[filename1, filename2], variables=variables)
 
     def get_property(self, filename, property):
         return self.try_read_file(self.get_property_filename(filename, property))
