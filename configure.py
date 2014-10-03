@@ -16,7 +16,7 @@ class Generator(object):
 
         self.output = open(script_filename, 'w')
         self.ninja = ninja_syntax.Writer(self.output)
-        self.ninja.include(os.path.abspath(os.path.join(scriptdir, 'ninja.rules')))
+        self.ninja.include(ninja_syntax.escape_path(os.path.abspath(os.path.join(scriptdir, 'ninja.rules'))))
         self.ninja.variable('builddir', builddir)
         self.ninja.variable('run', [sys.executable, os.path.abspath(os.path.join(scriptdir, 'run.py'))])
 
