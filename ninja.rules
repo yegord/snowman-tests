@@ -1,4 +1,6 @@
+shell = /bin/sh -c
 diff = diff
+grep = grep
 run = run.py
 tee = tee
 decompiler = nocode
@@ -6,7 +8,13 @@ timeout = 300
 exit_code = 0
 
 rule decompile
-    command = $run --stdout $stdout --stderr $stderr --timeout $timeout --exit-code $exit_code $decompiler $in
+    command = $shell "$run --stdout $stdout --stderr $stderr --timeout $timeout --exit-code $exit_code $decompiler $in"
+    description = Decompile $in
 
 rule check_equal
-    command = $diff -u $in | $tee $out
+    command = $shell "$diff -u $in | $tee $out"
+    description = Diff $in
+
+rule check_matches
+    command = $shell "$grep -f $in > $out"
+    description = Grep $in

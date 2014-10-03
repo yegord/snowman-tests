@@ -28,7 +28,7 @@ def run(cmdline, stdout=None, stderr=None, **kwargs):
         if out != None:
             out.close()
         if err != None:
-            out.close()
+            err.close()
 
 def execute(cmdline, timeout=None, **kwargs):
     class Launcher(object):
