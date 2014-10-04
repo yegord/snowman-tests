@@ -46,19 +46,20 @@ class Generator(object):
         if not os.path.isdir(self.builddir):
             os.makedirs(self.builddir)
 
-        script_filename = os.path.join(self.builddir, 'build.ninja')
+        escape_path = ninja_syntax.escape_path
+        python = escape_path(sys.executable)
 
-        self.output = open(script_filename, 'w')
+        self.output = open(os.path.join(self.builddir, 'build.ninja'), 'w')
         self.ninja = ninja_syntax.Writer(self.output)
-        self.ninja.include(ninja_syntax.escape_path(os.path.abspath(os.path.join(scriptdir, 'ninja.rules'))))
-        self.ninja.variable('builddir', self.builddir)
-        self.ninja.variable('run', [sys.executable, os.path.abspath(os.path.join(scriptdir, 'run.py'))])
+        self.ninja.include(escape_path(os.path.join(scriptdir, 'ninja.rules')))
+        self.ninja.variable('builddir', escape_path(self.builddir))
+        self.ninja.variable('run', [python, escape_path(os.path.join(scriptdir, 'run.py'))])
 
         if sys.platform == 'win32':
             self.ninja.variable('shell', ['cmd', '/c'])
-            self.ninja.variable('diff', [sys.executable, os.path.abspath(os.path.join(scriptdir, 'diff.py'))])
-            self.ninja.variable('grep', [sys.executable, os.path.abspath(os.path.join(scriptdir, 'grep.py'))])
-            self.ninja.variable('tee', [sys.executable, os.path.abspath(os.path.join(scriptdir, 'tee.py'))])
+            self.ninja.variable('diff', [python, escape_path(os.path.join(scriptdir, 'diff.py'))])
+            self.ninja.variable('grep', [python, escape_path(os.path.join(scriptdir, 'grep.py'))])
+            self.ninja.variable('tee',  [python, escape_path(os.path.join(scriptdir, 'tee.py'))])
 
         if decompiler != None:
             decompiler = os.path.abspath(decompiler)
