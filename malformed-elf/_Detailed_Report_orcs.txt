@@ -1,0 +1,135 @@
+ ~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
+| Log report for fuzzed files based on foo                                      |
+ ~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
+
+How to read this report:
+
+(Fuzzed Metadata) | Corresponding fuzzing rule (docs/Melkor_Fuzzing_Rules.pdf)
+
+SHT[N] REL[E]  = Section Header N type is SHT_REL or SHT_RELA; Relocation entry E within that section was fuzzed.
+SHT[N] SYM[E]  = Section Header N type is SHT_SYMTAB or SHT_DYNSYM; Symbol entry E within that section was fuzzed.
+SHT[N] DYN[E]  = Section Header N type is SHT_DYNAMIC; Dynamic entry E within that section was fuzzed.
+SHT[N] NOTE[E] = Section Header N type is SHT_NOTE; Note entry E within that section was fuzzed.
+STRS[N] = Section Header N type is SHT_STRTAB; the String Table within that section was fuzzed.
+SHT[N]  = Section Header N was fuzzed.
+PHT[N]  = Program Header N was fuzzed.
+HDR     = ELF Header was fuzzed.
+
+=================================================================================
+
+[+] Malformed ELF: 'orc_0002':
+
+
+[+] Fuzzing the Section Header Table with 35 entries
+(SHT[1]->sh_addralign = 0xffffffffcafed00d) | SHT[1] rule [05] executed
+(SHT[4]->sh_type = 0x4) | SHT[4] rule [07] executed
+(SHT[4]->sh_type = 0x6fffffff) | SHT[4] rule [31] executed
+(SHT[5]->sh_type = 0x8fffffff) | SHT[5] rule [08] executed
+(SHT[6]->sh_size = 0x000000000000babe) | SHT[6] rule [04] executed
+(SHT[6]->sh_addralign = 0x0000000000000fff) | SHT[6] rule [05] executed
+(SHT[6]->sh_flags = 0x000000000ff00002) | SHT[6] rule [32] executed
+(SHT[7]->sh_size = 0x0000000000000023, sh_entsize = 0x0000000000000001) | SHT[7] rule [36] executed
+(SHT[9]->sh_type = 0x6fffffff) | SHT[9] rule [31] executed
+(SHT[10]->sh_addralign = 0x0000000000000fff) | SHT[10] rule [05] executed
+(SHT[10]->sh_name = 0xf4) | SHT[10] rule [30] executed
+(SHT[10]->sh_type = 0x60000000) | SHT[10] rule [31] executed
+(SHT[13]->sh_size = 0x000000000000c0de) | SHT[13] rule [04] executed
+(SHT[14]->sh_addralign = 0x0d382c3044444444) | SHT[14] rule [05] executed
+(SHT[16]->sh_flags = 0x80000000deadface) | SHT[16] rule [10] executed
+(SHT[17]->sh_entsize = 0x000000000000c7ce) | SHT[17] rule [06] executed
+(SHT[18]->sh_addralign = 0x4343434341414141) | SHT[18] rule [05] executed
+(SHT[20]->sh_name = 0x797) | SHT[20] rule [01] executed
+(SHT[20]->sh_offset = 0x000000002f7a1b2d) | SHT[20] rule [03] executed
+(SHT[21]->sh_size = 0xdefeca7edefec8ed) | SHT[21] rule [04] executed
+(SHT[21]->sh_flags = 0x000000000ff00003) | SHT[21] rule [32] executed
+(SHT[22]->sh_addr = 0x00000000080571a9) | SHT[22] rule [02] executed
+(SHT[22]->sh_flags = 0x0000000000000002) | SHT[22] rule [26] executed
+(SHT[24]->sh_name = 0xbb) | SHT[24] rule [01] executed
+(SHT[25]->sh_flags = 0x0000000000000002) | SHT[25] rule [10] executed
+(SHT[25]->sh_flags = 0x000000000ff00002) | SHT[25] rule [32] executed
+(SHT[27]->sh_addr = 0x0000000037d06d59) | SHT[27] rule [02] executed
+(SHT[29]->sh_type = 0x1, sh_flags = 0x0000000000000001, sh_size = 0x0000000000000000, sh_entsize = 0x000000000000ff00) | SHT[29] rule [17] executed
+(SHT[31]->sh_size = 0x000000000000026a, sh_entsize = 0x0000000000000000) | SHT[31] rule [36] executed
+(SHT[33]->sh_flags = 0x0000000000000000) | SHT[33] rule [10] executed
+(SHT[33]->sh_size = 0x0000000000000000, sh_flags = 0x0000000000000000, sh_entsize = 0x43cdc34e42424242, sh_addralign = 0x0d15ea5edeadc0de) | SHT[33] rule [22] executed
+(SHT[33]->sh_flags = 0x000000000ff00000) | SHT[33] rule [32] executed
+(SHT[34]->sh_name = 0xfb) | SHT[34] rule [01] executed
+(SHT[34]->sh_type = 0x1) | SHT[34] rule [07] executed
+(SHT[34]->sh_flags = 0x000000000ff00000) | SHT[34] rule [32] executed
+
+=================================================================================
+
+[+] Malformed ELF: 'orc_0008':
+
+[+] Fuzzing the Section Header Table with 35 entries
+(SHT[2]->sh_type = 0x0) | SHT[2] rule [07] executed
+(SHT[4]->sh_addr = 0x000000008100f3b7) | SHT[4] rule [02] executed
+(SHT[4]->sh_flags = 0xdefeca7ecccccccc) | SHT[4] rule [10] executed
+(SHT[4]->sh_flags = 0xdefeca7ecffccccc) | SHT[4] rule [32] executed
+(SHT[6]->sh_addr = 0x00000000c0009965) | SHT[6] rule [02] executed
+(SHT[6]->sh_flags = 0x0000000000000002) | SHT[6] rule [10] executed
+(SHT[6]->sh_type = 0x6ffffff6) | SHT[6] rule [33] executed
+(SHT[9]->sh_size = 0x0000000000000000) | SHT[9] rule [04] executed
+(SHT[9]->sh_type = 0x8) | SHT[9] rule [07] executed
+(SHT[9]->sh_type = 0x70000001) | SHT[9] rule [08] executed
+(SHT[11]->sh_type = 0x0) | SHT[11] rule [07] executed
+(SHT[11]->sh_flags = 0x0000000000000004) | SHT[11] rule [34] executed
+(SHT[12]->sh_size = 0x0000000000008000) | SHT[12] rule [04] executed
+(SHT[13]->sh_flags = 0x0000000000000004) | SHT[13] rule [34] executed
+(SHT[14]->sh_flags = 0x0000000000000000) | SHT[14] rule [10] executed
+(SHT[15]->sh_size = 0x0000000000000032, sh_entsize = 0xffffffffffffffff) | SHT[15] rule [36] executed
+(SHT[16]->sh_size = 0x000000000000003d, sh_entsize = 0xffffffffffffffff) | SHT[16] rule [36] executed
+(SHT[17]->sh_type = 0x60000000) | SHT[17] rule [31] executed
+(SHT[19]->sh_flags = 0x000000000ff00003) | SHT[19] rule [32] executed
+(SHT[21]->sh_flags = 0x000000000ff00003) | SHT[21] rule [32] executed
+(SHT[22]->sh_flags = 0x0000000000000002) | SHT[22] rule [26] executed
+(SHT[23]->sh_entsize = 0x4f93ef574f032c98) | SHT[23] rule [06] executed
+(SHT[25]->sh_name = 0x6135e9c9) | SHT[25] rule [01] executed
+(SHT[26]->sh_flags = 0x0000000000000000) | SHT[26] rule [10] executed
+(SHT[27]->sh_offset = 0x0000000063495765) | SHT[27] rule [03] executed
+(SHT[31]->sh_type = 0x1, sh_flags = 0xb16b00b500031337, sh_size = 0x000000000000ffff, sh_entsize = 0x7c7a70c8486e2dd4) | SHT[31] rule [17] executed
+(SHT[32]->sh_name = 0xfa) | SHT[32] rule [30] executed
+(SHT[34]->sh_entsize = 0xdefeca7e2138795e) | SHT[34] rule [06] executed
+(SHT[34]->sh_flags = 0xdeadface41414141) | SHT[34] rule [10] executed
+(SHT[34]->sh_type = 0x6fffffff) | SHT[34] rule [31] executed
+(SHT[34]->sh_type = 0x6ffffff7) | SHT[34] rule [33] executed
+
+=================================================================================
+
+[+] Malformed ELF: 'orc_0035':
+
+
+[+] Fuzzing the Section Header Table with 35 entries
+(SHT[0]->sh_name = 0xbeef, sh_offset = 0x0000000041414141, sh_size = 0x0000000000000000, sh_entsize = 0xdefeca7e80000000) | SHT[0] rule [09] executed
+(SHT[3]->sh_type = 0x6ffffff5) | SHT[3] rule [33] executed
+(SHT[5]->sh_size = 0x444444440d15ea5e) | SHT[5] rule [04] executed
+(SHT[5]->sh_type = 0x11) | SHT[5] rule [07] executed
+(SHT[6]->sh_addralign = 0x0000000000001001) | SHT[6] rule [05] executed
+(SHT[8]->sh_entsize = 0xdeadface144452c2) | SHT[8] rule [06] executed
+(SHT[9]->sh_link = 0x0, sh_info = 0x4) | SHT[9] rule [12] executed
+(SHT[10]->sh_name = 0xb8) | SHT[10] rule [01] executed
+(SHT[10]->sh_type = 0x6ffffffe) | SHT[10] rule [33] executed
+(SHT[12]->sh_entsize = 0xffff0000deadface) | SHT[12] rule [06] executed
+(SHT[12]->sh_flags = 0x4ed88f4c00031337) | SHT[12] rule [10] executed
+(SHT[13]->sh_type = 0x7, sh_flags = 0x0000000000000000) | SHT[13] rule [23] executed
+(SHT[13]->sh_type = 0x6ffffff7) | SHT[13] rule [33] executed
+(SHT[14]->sh_size = 0x0000000000000000) | SHT[14] rule [04] executed
+(SHT[14]->sh_flags = 0x0000000000000004) | SHT[14] rule [34] executed
+(SHT[15]->sh_name = 0x0) | SHT[15] rule [01] executed
+(SHT[19]->sh_flags = 0x0000000000000001) | SHT[19] rule [34] executed
+(SHT[19]->sh_size = 0x0000000000000009, sh_entsize = 0xffffffffffffffff) | SHT[19] rule [36] executed
+(SHT[20]->sh_flags = 0x000000000ff00003) | SHT[20] rule [32] executed
+(SHT[21]->sh_size = 0x00000000000001d1, sh_entsize = 0x000000000000000f) | SHT[21] rule [36] executed
+(SHT[22]->sh_entsize = 0x0d15ea5e7fffffff) | SHT[22] rule [06] executed
+(SHT[22]->sh_flags = 0x0000000000000002) | SHT[22] rule [26] executed
+(SHT[25]->sh_type = 0x6ffffff5) | SHT[25] rule [33] executed
+(SHT[27]->sh_entsize = 0x0000000000000000) | SHT[27] rule [06] executed
+(SHT[27]->sh_flags = 0x000000000ff00000) | SHT[27] rule [32] executed
+(SHT[28]->sh_name = 0xd2) | SHT[28] rule [01] executed
+(SHT[28]->sh_entsize = 0xdeadfacec0000000) | SHT[28] rule [06] executed
+(SHT[31]->sh_addralign = 0x0000000000001001) | SHT[31] rule [05] executed
+(SHT[32]->sh_type = 0xb) | SHT[32] rule [07] executed
+(SHT[33]->sh_offset = 0x0000000062bba87f) | SHT[33] rule [03] executed
+(SHT[33]->sh_size = 0x600dcafe4ecf2051) | SHT[33] rule [04] executed
+
+=================================================================================
