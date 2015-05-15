@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# "THE JUICE-WARE LICENSE" (Revision 42)
+#
+# <yegor.derevenets@gmail.com> wrote this file. As long as you
+# keep this notice, you can do whatever you want with this stuff.
+# If we meet someday, and you think this stuff is worth it, you
+# can buy me a glass of juice in return. Yegor Derevenets
+
 import argparse, subprocess, sys, threading
 
 class ExecutionTimeout(Exception):
