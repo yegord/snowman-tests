@@ -41,12 +41,9 @@ def main():
         regexps.append(re.compile(args.e))
 
     if args.f:
-        f = open(args.f, 'U')
-        try:
-            for line in f:
+        with open(args.f, 'U') as file:
+            for line in file:
                 regexps.append(re.compile(line.rstrip('\n')))
-        finally:
-            f.close()
 
     found = False
     if len(args.file) == 0:
@@ -58,12 +55,9 @@ def main():
                 if grep(sys.stdin, regexps):
                     found = True
             else:
-                file = open(filename, 'U')
-                try:
+                with open(filename, 'U') as file:
                     if grep(file, regexps):
                         found = True
-                finally:
-                    file.close()
 
     if found:
         sys.exit(0)

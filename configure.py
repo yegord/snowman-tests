@@ -14,11 +14,8 @@ scriptdir = os.path.abspath(os.path.dirname(__file__))
 
 def try_read_file(filename):
     if os.path.isfile(filename):
-        file = open(filename, 'U')
-        try:
+        with open(filename, 'U') as file:
             return file.read()
-        finally:
-            file.close()
     return None
 
 def try_read_int(filename):
@@ -40,11 +37,8 @@ def write_file(filename, content):
     if not os.path.isdir(dirname):
         os.makedirs(dirname)
 
-    file = open(filename, 'w')
-    try:
+    with open(filename, 'w') as file:
         file.write(content)
-    finally:
-        file.close()
 
 class Generator(object):
     def __init__(self, builddir, decompiler = None):

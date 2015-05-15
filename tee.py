@@ -27,5 +27,8 @@ def main():
         for file in files:
             file.write(line)
 
+    for file in files[1:]
+        close(file)
+
 if __name__ == '__main__':
     main()
