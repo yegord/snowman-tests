@@ -147,6 +147,7 @@ def main():
         args.test.extend(glob.glob(os.path.join(scriptdir, 'bulk-x86-64', '*')))
         args.test.extend(glob.glob(os.path.join(scriptdir, 'debian-armel', '*')))
         args.test.extend(glob.glob(os.path.join(scriptdir, 'debian-armhf', '*')))
+        args.test.extend(glob.glob(os.path.join(scriptdir, 'mipsbin', '*')))
         args.test.extend(glob.glob(os.path.join(scriptdir, 'hand-made', '[0-9][0-9][0-9]_*')))
         args.test.append(os.path.join(scriptdir, 'hand-made/src'))
 
