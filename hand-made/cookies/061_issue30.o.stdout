@@ -1,0 +1,25 @@
+
+int64_t _f(int32_t edi) {
+    int64_t rax2;
+    int64_t rcx3;
+    int64_t rdx4;
+    int64_t rax5;
+    int64_t rax6;
+
+    *(int32_t*)&rax2 = 0;
+    *((int32_t*)&rax2 + 1) = 0;
+    if (edi != 0) {
+        rcx3 = edi + 1;
+        *(int32_t*)&rdx4 = 0;
+        *((int32_t*)&rdx4 + 1) = 0;
+        do {
+            rax5 = rdx4;
+            rax6 = rax5 * rax5;
+            --edi;
+            rdx4 = rcx3 + rax6 + -1;
+            --rcx3;
+        } while (edi != 0);
+        rax2 = rax6 + rcx3;
+    }
+    return rax2;
+}
