@@ -1,16 +1,12 @@
 
 int64_t gcd(int32_t edi, int32_t esi) {
-    int32_t v3;
-    int32_t v4;
-    int64_t rax5;
+    int64_t rax3;
 
-    v3 = edi;
-    v4 = esi;
-    if (v4 != 0) {
-        rax5 = gcd(v4, v3 % v4);
+    if (esi != 0) {
+        rax3 = gcd(esi, edi % esi);
     } else {
-        *(int32_t*)&rax5 = v3;
-        *((int32_t*)&rax5 + 1) = 0;
+        *(int32_t*)&rax3 = edi;
+        *((int32_t*)&rax3 + 1) = 0;
     }
-    return rax5;
+    return rax3;
 }
