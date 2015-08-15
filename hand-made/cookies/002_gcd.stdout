@@ -6,7 +6,7 @@ int64_t gcd(int32_t edi, int32_t esi) {
         rax3 = gcd(esi, edi % esi);
     } else {
         *(int32_t*)&rax3 = edi;
-        *((int32_t*)&rax3 + 1) = 0;
+        ((int32_t*)&rax3)[1] = 0;
     }
     return rax3;
 }

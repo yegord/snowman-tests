@@ -6,11 +6,11 @@ int64_t _f(int32_t edi) {
     int64_t rax5;
 
     *(int32_t*)&rax2 = (int32_t)_f;
-    *((int32_t*)&rax2 + 1) = (int32_t)_f;
+    ((int32_t*)&rax2)[1] = (int32_t)_f;
     if (edi != _f) {
         rcx3 = edi + 1;
         *(int32_t*)&rdx4 = (int32_t)_f;
-        *((int32_t*)&rdx4 + 1) = (int32_t)_f;
+        ((int32_t*)&rdx4)[1] = (int32_t)_f;
         do {
             rax5 = rdx4 * rdx4;
             --edi;

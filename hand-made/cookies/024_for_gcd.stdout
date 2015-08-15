@@ -4,7 +4,7 @@ int64_t gcd(int32_t edi, int32_t esi) {
 
     if (esi == 0) {
         *(int32_t*)&rax3 = edi;
-        *((int32_t*)&rax3 + 1) = 0;
+        ((int32_t*)&rax3)[1] = 0;
     } else {
         rax3 = gcd(esi, edi % esi);
     }
@@ -18,7 +18,7 @@ int64_t main() {
     v1 = 0;
     while (v1 <= 9) {
         *(int32_t*)&rax2 = v1 + v1;
-        *((int32_t*)&rax2 + 1) = 0;
+        ((int32_t*)&rax2)[1] = 0;
         gcd(v1, (int32_t)(rax2 + 1));
         ++v1;
     }
