@@ -2,36 +2,34 @@
 /* do_switch(int) */
 int32_t _Z9do_switchi(int32_t a1) {
     int32_t eax2;
-    int32_t eax3;
 
-    eax2 = a1;
-    if (eax2 == 5) {
-        eax3 = (int32_t)"five";
+    if (a1 == 5) {
+        eax2 = (int32_t)"five";
     } else {
-        if (eax2 > 5) {
-            if (eax2 == 8) {
-                eax3 = (int32_t)"eight";
+        if (a1 > 5) {
+            if (a1 == 8) {
+                eax2 = (int32_t)"eight";
             } else {
-                if (eax2 > 8) {
-                    if (eax2 == 10) {
-                        eax3 = (int32_t)"ten";
+                if (a1 > 8) {
+                    if (a1 == 10) {
+                        eax2 = (int32_t)"ten";
                     } else {
-                        if (eax2 < 10) {
-                            eax3 = (int32_t)"nine";
+                        if (a1 < 10) {
+                            eax2 = (int32_t)"nine";
                         } else {
-                            if (eax2 == 0x18894) {
-                                eax3 = (int32_t)"stopyatsot";
+                            if (a1 == 0x18894) {
+                                eax2 = (int32_t)"stopyatsot";
                             } else {
                                 goto addr_0x8048189_14;
                             }
                         }
                     }
                 } else {
-                    if (eax2 == 6) {
-                        eax3 = (int32_t)"six";
+                    if (a1 == 6) {
+                        eax2 = (int32_t)"six";
                     } else {
-                        if (eax2 == 7) {
-                            eax3 = (int32_t)"seven";
+                        if (a1 == 7) {
+                            eax2 = (int32_t)"seven";
                         } else {
                             goto addr_0x8048189_14;
                         }
@@ -39,25 +37,25 @@ int32_t _Z9do_switchi(int32_t a1) {
                 }
             }
         } else {
-            if (eax2 == 2) {
-                eax3 = (int32_t)"two";
+            if (a1 == 2) {
+                eax2 = (int32_t)"two";
             } else {
-                if (eax2 > 2) {
-                    if (eax2 == 3) {
-                        eax3 = (int32_t)"three";
+                if (a1 > 2) {
+                    if (a1 == 3) {
+                        eax2 = (int32_t)"three";
                     } else {
-                        if (eax2 == 4) {
-                            eax3 = (int32_t)"four";
+                        if (a1 == 4) {
+                            eax2 = (int32_t)"four";
                         } else {
                             goto addr_0x8048189_14;
                         }
                     }
                 } else {
-                    if (eax2 == 0) {
-                        eax3 = (int32_t)"zero";
+                    if (a1 == 0) {
+                        eax2 = (int32_t)"zero";
                     } else {
-                        if (eax2 == 1) {
-                            eax3 = (int32_t)"one";
+                        if (a1 == 1) {
+                            eax2 = (int32_t)"one";
                         } else {
                             goto addr_0x8048189_14;
                         }
@@ -67,8 +65,8 @@ int32_t _Z9do_switchi(int32_t a1) {
         }
     }
     addr_0x804818e_33:
-    return eax3;
+    return eax2;
     addr_0x8048189_14:
-    eax3 = (int32_t)"many";
+    eax2 = (int32_t)"many";
     goto addr_0x804818e_33;
 }
