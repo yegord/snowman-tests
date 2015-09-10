@@ -16,7 +16,7 @@ int32_t f() {
 
     v1 = 20;
     eax2 = h();
-    if (eax2 != 0) {
+    if (eax2) {
         eax3 = g(1, 2, 3, 4);
         v1 = 20 + eax3;
     }

@@ -51,7 +51,7 @@ int32_t _Z9do_switchi(int32_t a1) {
                         }
                     }
                 } else {
-                    if (a1 == 0) {
+                    if (!a1) {
                         eax2 = (int32_t)"zero";
                     } else {
                         if (a1 == 1) {

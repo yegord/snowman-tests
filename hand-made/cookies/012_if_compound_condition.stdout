@@ -8,7 +8,7 @@ void h() {
 }
 
 void f(int32_t edi, int32_t esi, int32_t edx) {
-    if (edi == 0 || (esi == 0 || edx == 0)) {
+    if (!edi || (!esi || !edx)) {
         h();
     } else {
         g();

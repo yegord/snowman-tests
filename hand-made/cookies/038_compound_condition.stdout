@@ -8,15 +8,15 @@ void h() {
 }
 
 void f(int32_t edi, int32_t esi, int32_t edx, int32_t ecx) {
-    if (edi != 0 && esi != 0 || edx != 0 && ecx != 0) {
+    if (edi && esi || edx && ecx) {
         g();
     } else {
         h();
     }
-    if ((edi != 0 || esi != 0) && (edx != 0 || ecx != 0)) {
+    if ((edi || esi) && (edx || ecx)) {
         g();
     }
-    if (edi != 0 || (esi != 0 && edx != 0 || ecx != 0)) {
+    if (edi || (esi && edx || ecx)) {
         h();
     }
     return;

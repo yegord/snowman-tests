@@ -2,7 +2,7 @@
 int64_t gcd(int32_t edi, int32_t esi) {
     int64_t rax3;
 
-    if (esi == 0) {
+    if (!esi) {
         *(int32_t*)&rax3 = edi;
         ((int32_t*)&rax3)[1] = 0;
     } else {
