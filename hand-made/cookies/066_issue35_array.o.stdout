@@ -1,0 +1,4 @@
+
+int32_t _f(int16_t* a1, int32_t a2) {
+    return (int32_t)a1[a2];
+}
