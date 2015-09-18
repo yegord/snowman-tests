@@ -1,4 +1,4 @@
-TARGET		= mips-linux-gnu
+TARGET		= mips-linux
 CC		= $(TARGET)-gcc
 CXX		= $(TARGET)-g++
 CFLAGS		= -std=c99
