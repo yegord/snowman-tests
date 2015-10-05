@@ -3,6 +3,7 @@ diff = diff
 grep = grep
 run = run.py
 tee = tee
+cp = cp
 decompiler = nocode
 timeout = 300
 exit_code = 0
@@ -18,3 +19,7 @@ rule check_equal
 rule check_matches
     command = $shell "$grep -f $in > $out"
     description = Grep $in
+
+rule update_answer
+    command = $cp $in
+    description = Copy $in
