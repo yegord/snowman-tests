@@ -11,7 +11,7 @@
 import argparse, re, sys
 
 def matches(line, regexp):
-    return regexp.search(line) != None
+    return regexp.search(line) is not None
 
 def matches_any(line, regexps):
     for regexp in regexps:
@@ -37,7 +37,7 @@ def main():
 
     regexps = []
 
-    if args.e != None:
+    if args.e is not None:
         regexps.append(re.compile(args.e))
 
     if args.f:

@@ -26,15 +26,15 @@ def run(cmdline, stdout=None, stderr=None, **kwargs):
     try:
         out = None
         err = None
-        if (stdout != None):
+        if (stdout is not None):
             out = open(stdout, "w")
-        if (stderr != None):
+        if (stderr is not None):
             err = open(stderr, "w")
         return execute(cmdline, stdout=out, stderr=err, **kwargs)
     finally:
-        if out != None:
+        if out is not None:
             out.close()
-        if err != None:
+        if err is not None:
             err.close()
 
 def execute(cmdline, timeout=None, **kwargs):
@@ -63,7 +63,7 @@ def execute(cmdline, timeout=None, **kwargs):
         thread.join()
         raise ExecutionTimeout()
 
-    if launcher.exception != None:
+    if launcher.exception is not None:
         raise launcher.exception
 
     return launcher.process.returncode
@@ -81,7 +81,7 @@ def main():
 
     try:
         exit_code = run([args.program] + args.argument, stdout=args.stdout, stderr=args.stderr, timeout=args.timeout)
-        if args.exit_code != None and args.exit_code != exit_code:
+        if args.exit_code is not None and args.exit_code != exit_code:
             raise UnexpectedExitCode(exit_code, args.exit_code)
     except ExecutionTimeout as e:
         sys.stderr.write(str(e) + '\n')

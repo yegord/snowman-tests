@@ -102,9 +102,9 @@ def add_test(ninja, builddir, filename, targets):
 
 def decompile(ninja, filename, stdout, stderr, timeout, exit_code):
     variables = { 'stdout': stdout, 'stderr': stderr }
-    if timeout != None:
+    if timeout is not None:
         variables['timeout'] = timeout
-    if exit_code != None:
+    if exit_code is not None:
         variables['exit_code'] = exit_code
     return ninja.build([stdout, stderr], 'decompile', inputs=[filename], variables=variables)
 
@@ -139,14 +139,14 @@ def read_file(filename):
 
 def read_int(filename):
     result = read_file(filename)
-    if result != None:
+    if result is not None:
         return int(result)
     else:
         return None
 
 def read_lines(filename):
     result = read_file(filename)
-    if result != None:
+    if result is not None:
         return result.splitlines()
     else:
         return []
