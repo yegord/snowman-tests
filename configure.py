@@ -127,7 +127,7 @@ class Generator(object):
             self.check_matches('%s.grep.%d' % (output, i), output, regexp_file)
 
     def check_equal(self, diff_output, output, correct_output):
-        self.ninja.build([diff_output], 'check_equal', inputs=[output, correct_output])
+        self.ninja.build([diff_output], 'check_equal', inputs=[correct_output, output])
 
     def check_matches(self, grep_output, output, regexp_file):
         self.ninja.build([grep_output], 'check_matches', inputs=[regexp_file, output])
@@ -142,7 +142,8 @@ def main():
 
     if len(args.test) == 0:
         args.test.extend(glob.glob(os.path.join(scriptdir, 'arm', '[0-9][0-9][0-9]_*')))
-        args.test.extend(glob.glob(os.path.join(scriptdir, 'mips', '[0-9][0-9][0-9]_*')))
+        args.test.extend(glob.glob(os.path.join(scriptdir, 'mipsel', '[0-9][0-9][0-9]_*')))
+        args.test.extend(glob.glob(os.path.join(scriptdir, 'mipseb', '[0-9][0-9][0-9]_*')))
         args.test.extend(glob.glob(os.path.join(scriptdir, 'bulk-mingw32', '*')))
         args.test.extend(glob.glob(os.path.join(scriptdir, 'bulk-x86-64', '*')))
         args.test.extend(glob.glob(os.path.join(scriptdir, 'debian-armel', '*')))

@@ -1,4 +1,4 @@
-TARGET		= /home/nietzsche/trunk/TINY/tools/../toolchain/rsdk-1.3.6-4181-EB-2.6.30-0.9.30/bin/rsdk-linux
+TARGET		= mips-linux
 CC		= $(TARGET)-gcc
 CXX		= $(TARGET)-g++
 CFLAGS		= -std=c99
