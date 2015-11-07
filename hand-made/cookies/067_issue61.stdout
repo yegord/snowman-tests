@@ -1,0 +1,17 @@
+
+int64_t _puts = 0x100000f8c;
+
+void _puts(int64_t rdi) {
+    goto _puts;
+}
+
+int64_t _main() {
+    _puts("hello");
+    return 0;
+}
+
+int64_t dyld_stub_binder = 0;
+
+void fun_100000f8c() {
+    goto dyld_stub_binder;
+}
