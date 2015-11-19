@@ -1,4 +1,4 @@
-TARGET		= mips-linux
+TARGET		= ../../trunk/TINY/toolchain/rsdk-1.3.6-5281-EB-2.6.30-0.9.30/bin/rsdk-linux
 CC		= $(TARGET)-gcc
 CXX		= $(TARGET)-g++
 CFLAGS		= -std=c99 -g
