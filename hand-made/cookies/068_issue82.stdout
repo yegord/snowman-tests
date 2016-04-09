@@ -1,0 +1,11 @@
+
+int64_t foo(uint32_t* rdi, unsigned char sil) {
+    uint32_t ecx3;
+
+    ecx3 = (*rdi & 0x400) >> 10;
+    if (!(*reinterpret_cast<unsigned char*>(&ecx3) ^ sil)) {
+        return 0;
+    } else {
+        return 1;
+    }
+}

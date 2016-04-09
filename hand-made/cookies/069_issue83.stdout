@@ -1,0 +1,12 @@
+
+int64_t foo(int32_t* rdi) {
+    int64_t rax2;
+
+    *reinterpret_cast<int32_t*>(&rax2) = *rdi;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax2) + 4) = 0;
+    if (*reinterpret_cast<int32_t*>(&rax2) >= 0x101) {
+        *reinterpret_cast<int32_t*>(&rax2) = 0x100;
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax2) + 4) = 0;
+    }
+    return rax2;
+}
