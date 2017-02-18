@@ -20,7 +20,7 @@ int32_t _Z9do_switchi(int32_t a1) {
                             if (a1 == 0x18894) {
                                 eax2 = reinterpret_cast<int32_t>("stopyatsot");
                             } else {
-                                goto addr_0x8048189_14;
+                                goto addr_8048189_14;
                             }
                         }
                     }
@@ -31,7 +31,7 @@ int32_t _Z9do_switchi(int32_t a1) {
                         if (a1 == 7) {
                             eax2 = reinterpret_cast<int32_t>("seven");
                         } else {
-                            goto addr_0x8048189_14;
+                            goto addr_8048189_14;
                         }
                     }
                 }
@@ -47,7 +47,7 @@ int32_t _Z9do_switchi(int32_t a1) {
                         if (a1 == 4) {
                             eax2 = reinterpret_cast<int32_t>("four");
                         } else {
-                            goto addr_0x8048189_14;
+                            goto addr_8048189_14;
                         }
                     }
                 } else {
@@ -57,16 +57,16 @@ int32_t _Z9do_switchi(int32_t a1) {
                         if (a1 == 1) {
                             eax2 = reinterpret_cast<int32_t>("one");
                         } else {
-                            goto addr_0x8048189_14;
+                            goto addr_8048189_14;
                         }
                     }
                 }
             }
         }
     }
-    addr_0x804818e_33:
+    addr_804818e_33:
     return eax2;
-    addr_0x8048189_14:
+    addr_8048189_14:
     eax2 = reinterpret_cast<int32_t>("many");
-    goto addr_0x804818e_33;
+    goto addr_804818e_33;
 }
