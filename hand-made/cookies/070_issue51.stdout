@@ -34,7 +34,7 @@ int32_t fun_10071040(uint32_t a1) {
     }
 }
 
-int16_t fun_10071080() {
+int32_t fun_10071080() {
     return 1;
 }
 
