@@ -28,6 +28,7 @@ def main():
         args.tests.extend(glob.glob(os.path.join(scriptdir, 'debian-armhf', '*')))
         args.tests.extend(glob.glob(os.path.join(scriptdir, 'hand-made', '[0-9][0-9][0-9]_*')))
         args.tests.append(os.path.join(scriptdir, 'hand-made/src'))
+        args.tests.extend(glob.glob(os.path.join(scriptdir, 'le', '*')))
 
     create_build_file(args.builddir, args.decompiler, args.tests)
 
